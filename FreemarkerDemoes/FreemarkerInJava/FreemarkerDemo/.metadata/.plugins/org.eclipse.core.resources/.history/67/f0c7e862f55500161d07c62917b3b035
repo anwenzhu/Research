@@ -1,0 +1,5 @@
+package demo.freemarker;
+
+public class User {
+
+}

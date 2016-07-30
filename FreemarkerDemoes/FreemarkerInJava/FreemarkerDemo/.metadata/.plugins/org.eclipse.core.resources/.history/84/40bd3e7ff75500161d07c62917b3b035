@@ -1,0 +1,31 @@
+package demo.freemarker.util;
+
+import java.io.IOException;
+
+import freemarker.core.ParseException;
+import freemarker.template.Configuration;
+import freemarker.template.MalformedTemplateNameException;
+import freemarker.template.Template;
+import freemarker.template.TemplateNotFoundException;
+
+public class FreeMarkerUtil {
+    public Template getTemplateByName(String name) {
+        Template template = null;
+        
+        try {
+            Configuration configuration = new Configuration();
+            configuration.setClassForTemplateLoading(this.getClass(), "template/");
+            template = configuration.getTemplate(name);
+        } catch (TemplateNotFoundException e) {
+            e.printStackTrace();
+        } catch (MalformedTemplateNameException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+        return template;
+    }
+}

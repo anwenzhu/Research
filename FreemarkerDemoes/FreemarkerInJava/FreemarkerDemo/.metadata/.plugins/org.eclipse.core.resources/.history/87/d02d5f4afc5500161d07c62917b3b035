@@ -1,0 +1,13 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ÄãºÃ£¬${username}
+<#list users as user><br>
+
+</#list><br>
+</body>
+</html>

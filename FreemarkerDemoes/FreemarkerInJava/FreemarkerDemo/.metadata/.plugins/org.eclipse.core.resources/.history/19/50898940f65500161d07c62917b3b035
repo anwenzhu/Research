@@ -1,0 +1,5 @@
+package demo.freemarker.util;
+
+public class FreeMarkerUtil {
+
+}
